@@ -1,6 +1,5 @@
 package chapter4;
 
-import java.util.Scanner;
 
 public class GasMileage {
 //        calculate and display the miles driven per gallon
@@ -12,29 +11,31 @@ public class GasMileage {
 //        print the miles per gallon obtained from each trip up to the recent trip
     private int milesDriven;
     private int gallonUsed;
+    private int milesPerGallon;
 
-        public static void milesDriven(int milesDriven) {
-            this.milesDriven = milesDriven;
-        }
-        System.out.println("Please enter the gallons used and enter -1 to quit: ");
-        int gallons = scanner.nextInt();
-        double milesPerGallon = (double)(milesDriven / gallons);
-        System.out.printf("The miles per gallon for each trip is %.2f",milesPerGallon);
-
-        while (milesDriven != -1 && gallons != -1){
-            System.out.println("\nPlease enter the miles driven and enter -1 to quit: ");
-            milesDriven = scanner.nextInt();
-            System.out.println("Please enter the gallon used and enter -1 to quit: ");
-            gallons = scanner.nextInt();
-
-            milesPerGallon = (double)(milesDriven / gallons);
-            System.out.printf("The miles per gallon for each trip is %.2f",milesPerGallon);
-        }
-
-
-
-
-
-
+//        public int milesDriven(int milesDriven) {
+//            this.milesDriven = milesDriven;
+//            return milesDriven;
+//        }
+//
+//    public int gallonUsed(int gallonUsed) {
+//        this.gallonUsed = gallonUsed;
+//        return gallonUsed;
+//
+//    }
+    public double milesPerGallon(int milesDriven, int gallonUsed) {
+        double milesPerGallon = (float) (milesDriven / gallonUsed);
+        return milesPerGallon;
     }
+    public double checkMilesPerGallon(){
+            return milesPerGallon;
+    }
+
+
+
+
+
+
+
 }
+
