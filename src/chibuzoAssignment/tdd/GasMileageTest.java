@@ -8,8 +8,9 @@ import static org.junit.Assert.assertEquals;
 public class GasMileageTest {
     @Test
     public void testMilesDrivenPerGallon(){
+        double expected = 10.0;
         GasMileage toyota = new GasMileage();
-        toyota.milesPerGallon(40, 20);
-        assertEquals(2.0, toyota.checkMilesPerGallon());
+        double actual = toyota.milesPerGallon(100, 10);
+        assertEquals(expected, actual, 0.01);
     }
 }
